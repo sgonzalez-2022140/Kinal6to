@@ -10,12 +10,12 @@ export const reply = async(req, res)=>{
         //Usar el id del usuario
         data.user = req.user._id
         //Verificar que exista el comentario
-        let comment = await Comment.findOne({_id: data.comment})
+        let comment = await Comment.findOne({_id: data.comment}).populate('user', ['name'])
         if(!comment) return res.status(404).send({message: 'No comments yet'})
         //Guardar la respuesta hacia ese comentario
         let reply = new Reply(data)
         await reply.save()
-        return res.send(`You reply to ${reply.user} with: ${reply.replypost}`)
+        return res.send(`You reply to ${comment} with: ${reply.replypost}`)
     }catch(err){
         console.error(err);
         return res.status(500).send({message: 'Error in the reply', err})

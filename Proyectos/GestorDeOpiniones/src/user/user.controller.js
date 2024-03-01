@@ -59,4 +59,26 @@ export const login = async(req, res)=>{
         return res.status(500).send({message: 'Error to login'})
     }
 }
+//Aun no funciona
+export const updateUser = async(req, res)=>{
+    try{
+        //capturar el id
+        let { id } = req.params
+        //capturar la data
+        let data = req.body
+        //Actualizar BD
+        let updatedUser = await User.findOneAndUpdate(
+            {_id: id},
+            data,
+            {new: true}
+        )
+        if(!updatedUser) return res.status(401).send({message: 'User not found'})
+        //responder si salio bien
+        return res.send({message: 'updated User', updatedUser})
+    }catch(err){
+        console.error(err)
+        if(err.keyValue.username) return res.status(400).send({message: `Username ${err.keyValue.username} is alredy taken`})
+        return res.status(500).send({message: 'Error updating account'})
+    }
+}
 

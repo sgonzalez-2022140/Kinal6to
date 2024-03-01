@@ -1,11 +1,12 @@
 'use strict'
 
 import jwt from 'jsonwebtoken'
-const secretKey = '@EstradaMiHijo@'
+
 
 export const generateJwt = async(payload)=>{
     try{
-       return jwt.sign(payload, secretKey, {
+        const secretKey = process.env.SECRET_KEY
+        return jwt.sign(payload, secretKey, {
         expiresIn: '3h',
         algorithm: 'HS256'
       })  
