@@ -27,10 +27,27 @@ export const checkUpdateUser = (data, userId)=>{
         if(
             Object.entries(data).length === 0 ||            
             data.role ||
-            data.role == ''
+            data.role == '' ||
+            data.password ||
+            data.password == ''
         ) {
             return false
         }
         return true
     }
 }
+
+//Me di cuenta que tambien aplica para el post 
+export const checkUpdateReply = (data, userId)=>{
+    if(userId){
+        if(
+            Object.entries(data).length === 0 ||            
+            data.user ||
+            data.user == ''             
+        ) {
+            return false
+        }
+        return true
+    }
+}
+
