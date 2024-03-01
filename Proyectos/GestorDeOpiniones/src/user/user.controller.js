@@ -1,7 +1,7 @@
 'use strict'
 
 import { generateJwt } from '../utils/jwt.js'
-import { encrypt, checkPassword } from '../utils/validator.js'
+import { encrypt, checkPassword, checkUpdateUser } from '../utils/validator.js'
 import User from './user.model.js'
 
 export const registUser = async(req, res)=>{
@@ -66,19 +66,37 @@ export const updateUser = async(req, res)=>{
         let { id } = req.params
         //capturar la data
         let data = req.body
+        //id del user
+        let uid = req.user._id        
         //Actualizar BD
+        let update = checkUpdateUser(data, id)
+        if(!update) return res.status(400).send({message: 'Have data that you cannot update'})
+
         let updatedUser = await User.findOneAndUpdate(
-            {_id: id},
+            { _id: id},
             data,
-            {new: true}
+            { new: true}
         )
-        if(!updatedUser) return res.status(401).send({message: 'User not found'})
-        //responder si salio bien
+        if(!updatedUser) return res.status(401).send({ message: 'User not found'})     
         return res.send({message: 'updated User', updatedUser})
     }catch(err){
         console.error(err)
-        if(err.keyValue.username) return res.status(400).send({message: `Username ${err.keyValue.username} is alredy taken`})
         return res.status(500).send({message: 'Error updating account'})
     }
 }
 
+export const deleteU = async(req, res)=>{
+    try{
+        //Obtener el Id
+        let { id } = req.params
+        //Eliminar (deleteOne (solo elimina no devuelve el documento) / findOneAndDelete (Me devuelve el documento eliminado))
+        let deletedUser = await User.findOneAndDelete({_id: id}) 
+        //Verificar que se eliminó
+        if(!deletedUser) return res.status(404).send({message: 'Account not found and not deleted'})
+        //Responder
+        return res.send({message: `Account with username ${deletedUser.username} deleted successfully`}) //status 200
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({message: 'Error deleting account'})
+    }
+}

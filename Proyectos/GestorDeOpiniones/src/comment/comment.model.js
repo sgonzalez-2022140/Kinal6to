@@ -2,7 +2,7 @@
 
 import mongoose, { Schema, model } from 'mongoose'
 
-const commentSchema = mongoose.Schema({
+const commentSchema = Schema({
     title: {
         type: String,
         required: true
