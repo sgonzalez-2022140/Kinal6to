@@ -1,0 +1,380 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Gestor de opiniones",
+    "dateExported": "2024-03-01T17:54:11.222Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "POST",
+            "containerId": "",
+            "created": "2024-03-01T13:08:01.319Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "0a9bd2db-74e4-4cb3-9b41-7459ad5a9992",
+            "name": "Update and Delete",
+            "containerId": "",
+            "created": "2024-03-01T16:11:04.859Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "8f97ba14-805a-43bb-9b6e-cf275ef7787d",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Create an account",
+            "url": "/registUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-01T13:08:01.320Z",
+            "modified": "2024-03-01T16:47:41.451Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Denys"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Orozco"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Denys"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    },
+                    {
+                        "name": "email",
+                        "value": "xdquehago@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "22556633"
+                    },
+                    {
+                        "name": "role",
+                        "value": "USER"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4de63f62-2f40-47cb-8bfa-bfa47a48d37a",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Create the user (comentador)",
+            "url": "/registUser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-01T16:15:42.289Z",
+            "modified": "2024-03-01T16:16:39.604Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Realiquez"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Sosa"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Realiquez"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    },
+                    {
+                        "name": "email",
+                        "value": "sosita@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "22556633"
+                    },
+                    {
+                        "name": "role",
+                        "value": "USER"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5bdd0491-c542-4186-a3ae-63edb6fc1876",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Login",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-01T13:08:01.321Z",
+            "modified": "2024-03-01T17:29:19.272Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "account",
+                        "value": "Realiquez"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4573f144-e364-4285-bbe9-a0657edbd73d",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Create a Post",
+            "url": "/createPost",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-01T13:08:01.322Z",
+            "modified": "2024-03-01T17:07:33.110Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZmY2NzE5Y2ZlODY3ZmU0MTBhMDMiLCJ1c2VybmFtZSI6IlJlYWxpcXVleiIsImVtYWlsIjoic29zaXRhQGdtYWlsLmNvbSIsIm5hbWUiOiJSZWFsaXF1ZXoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcwOTMxMjgzMCwiZXhwIjoxNzA5MzIzNjMwfQ.E_QI2_21eIuw6UIYn1JohbEXhPcS9xEUhpuaOk9vHIs"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Por que Estrada es tan malo?"
+                    },
+                    {
+                        "name": "category",
+                        "value": "OPINION"
+                    },
+                    {
+                        "name": "maintext",
+                        "value": "Quiero dar a conocer que Estrada es bien malo en el estudio ya que Pampichi siempre le gana en parciales y cortos  por lo que creo que le deberian de dar la beca a el mejor"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e1ff6719cfe867fe410a03"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "291542c7-638f-45e0-be12-11559b6442ec",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Reply a post",
+            "url": "/reply",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-01T13:08:01.323Z",
+            "modified": "2024-03-01T16:36:19.671Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZmY2NzE5Y2ZlODY3ZmU0MTBhMDMiLCJ1c2VybmFtZSI6IlJlYWxpcXVleiIsImVtYWlsIjoic29zaXRhQGdtYWlsLmNvbSIsIm5hbWUiOiJSZWFsaXF1ZXoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcwOTMxMDkzNCwiZXhwIjoxNzA5MzIxNzM0fQ.Wm8YXxI2_-Sa6j7QZsorju7ltpJhttSeBt83MvUORQk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "replypost",
+                        "value": "Si soy"
+                    },
+                    {
+                        "name": "comment",
+                        "value": "65e2039e97601895430f4ae9"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e1ff6719cfe867fe410a03"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b26c693d-7306-4075-87d7-0c9357d2b271",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0278a1c4-a11e-4e70-a684-3320e6697d98",
+            "name": "Log the User that reply your post",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-01T15:16:52.071Z",
+            "modified": "2024-03-01T16:35:34.661Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "account",
+                        "value": "Realiquez"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d6a5011-636e-428c-bb2d-73158e27764c",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0a9bd2db-74e4-4cb3-9b41-7459ad5a9992",
+            "name": "Update USER",
+            "url": "/updateUser/65e1ff6719cfe867fe410a03",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-03-01T16:11:13.972Z",
+            "modified": "2024-03-01T17:29:33.215Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZmY2NzE5Y2ZlODY3ZmU0MTBhMDMiLCJ1c2VybmFtZSI6IlJlYWxpcXVleiIsImVtYWlsIjoic29zaXRhQGdtYWlsLmNvbSIsIm5hbWUiOiJSZWFsaXF1ZXoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcwOTMxNDE1OSwiZXhwIjoxNzA5MzI0OTU5fQ.K6RGocHnkb6m7PuOqxzw6CaZ5lSEva2Q31LaF9ioGNw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Denys"
+                    },
+                    {
+                        "name": "lastname",
+                        "value": "Orozco"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Realiquez"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    },
+                    {
+                        "name": "email",
+                        "value": "denis@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "88779988"
+                    },
+                    {
+                        "name": "role",
+                        "value": "USER",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "bff92e4f-f663-4560-a449-f5a1bf8cb5d2",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0a9bd2db-74e4-4cb3-9b41-7459ad5a9992",
+            "name": "Delete User",
+            "url": "/deleteU/65e1ff5719cfe867fe4109ff",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-03-01T17:02:09.011Z",
+            "modified": "2024-03-01T17:05:34.595Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZmY1NzE5Y2ZlODY3ZmU0MTA5ZmYiLCJ1c2VybmFtZSI6IkRlbnlzIiwiZW1haWwiOiJ4ZHF1ZWhhZ29AZ21haWwuY29tIiwibmFtZSI6IkRlbnlzIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDkzMTI3MTgsImV4cCI6MTcwOTMyMzUxOH0.9055o9vQpnf8aT80OEhXq3xh3Sv2wYRvrTimYJUuIts"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f0e36b29-7222-4de0-9c7c-f08a0ae88f95",
+            "colId": "9f343976-1ad3-43bf-8d3e-c8e0f8481c64",
+            "containerId": "0a9bd2db-74e4-4cb3-9b41-7459ad5a9992",
+            "name": "Update the post",
+            "url": "/updatePost/65e2039e97601895430f4ae9",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-03-01T17:49:02.143Z",
+            "modified": "2024-03-01T17:53:50.542Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZmY2NzE5Y2ZlODY3ZmU0MTBhMDMiLCJ1c2VybmFtZSI6IlJlYWxpcXVleiIsImVtYWlsIjoic29zaXRhQGdtYWlsLmNvbSIsIm5hbWUiOiJSZWFsaXF1ZXoiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcwOTMxNDE1OSwiZXhwIjoxNzA5MzI0OTU5fQ.K6RGocHnkb6m7PuOqxzw6CaZ5lSEva2Q31LaF9ioGNw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Ya nada xd"
+                    },
+                    {
+                        "name": "category",
+                        "value": "OPINION"
+                    },
+                    {
+                        "name": "maintext",
+                        "value": "Quiero que lo olviden"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e1ff5719cfe867fe4109ff",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2689"
+        }
+    }
+}

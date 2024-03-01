@@ -22,3 +22,26 @@ export const createPost = async(req, res)=>{
         return res.status(500).send({message: 'Error creating your post :V', err})
     }
 }
+
+//no funciona jajaja
+export const updatePost = async (req, res)=>{
+    try{
+        //capturar la data
+        let data= req.body
+        //el id
+        let { id } = req.params
+        //validar que tenga datos
+        let update = data
+        if(!update) return res.status(400).send({message: `Data that connot change`})
+        let comment = await Comment.findOneAndUpdate(
+            {_id: id},
+            data,
+            {new: true}    
+        ).populate('user',['name'])
+        //validar
+        if(!comment) return res.status(404).send({message: 'Comment not found'})
+        return res.send({message: 'Comment updated successfully', comment})
+    }catch(err){
+        console.error(err)
+    }
+}
