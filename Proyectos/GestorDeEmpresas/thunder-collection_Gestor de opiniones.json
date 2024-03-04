@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "EmpresasGestor",
-    "dateExported": "2024-03-04T01:11:34.211Z",
+    "dateExported": "2024-03-04T01:33:17.851Z",
     "version": "1.1",
     "folders": [
         {
@@ -67,13 +67,18 @@
             "_id": "6dcc9641-be8c-4c3c-aec4-e1f26edca044",
             "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
             "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
-            "name": "Get years",
+            "name": "Get Companies",
             "url": "/getCompany",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-03T19:17:26.794Z",
-            "modified": "2024-03-03T19:19:03.016Z",
-            "headers": [],
+            "modified": "2024-03-04T01:30:11.099Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZDBhMDY5MDE5N2YyMzYwODJlY2UiLCJ1c2VybmFtZSI6ImptdXIiLCJuYW1lIjoiSm9yZ2UiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk1MTU1NzMsImV4cCI6MTcwOTUyOTk3M30.0IDGJX9Jia6PLslQYxrsGiO2pDqaEfVbDcu80b3kFUA"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -134,8 +139,13 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-03-04T00:08:19.919Z",
-            "modified": "2024-03-04T00:08:26.847Z",
-            "headers": [],
+            "modified": "2024-03-04T01:28:54.485Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZDBhMDY5MDE5N2YyMzYwODJlY2UiLCJ1c2VybmFtZSI6ImptdXIiLCJuYW1lIjoiSm9yZ2UiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk1MTU1NzMsImV4cCI6MTcwOTUyOTk3M30.0IDGJX9Jia6PLslQYxrsGiO2pDqaEfVbDcu80b3kFUA"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -233,6 +243,25 @@
             "created": "2024-03-04T00:56:07.984Z",
             "modified": "2024-03-04T00:56:12.462Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e8112418-0875-47ae-8bf3-401da618924c",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get Years",
+            "url": "/getYearCareer",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-03-04T01:24:12.600Z",
+            "modified": "2024-03-04T01:26:18.276Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZDBhMDY5MDE5N2YyMzYwODJlY2UiLCJ1c2VybmFtZSI6ImptdXIiLCJuYW1lIjoiSm9yZ2UiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk1MTU1NzMsImV4cCI6MTcwOTUyOTk3M30.0IDGJX9Jia6PLslQYxrsGiO2pDqaEfVbDcu80b3kFUA"
+                }
+            ],
             "params": [],
             "tests": []
         }
