@@ -1,28 +1,42 @@
 {
     "client": "Thunder Client",
-    "collectionName": "Gestor de opiniones",
-    "dateExported": "2024-03-01T05:38:58.723Z",
+    "collectionName": "EmpresasGestor",
+    "dateExported": "2024-03-04T01:11:34.211Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "e9075d48-83bd-4ec3-9f8e-db91340b122e",
-            "name": "POST",
+            "_id": "be6948b3-6d7e-4e72-9b79-92aa0da4de7a",
+            "name": "Post",
             "containerId": "",
-            "created": "2024-03-01T01:32:23.658Z",
+            "created": "2024-02-29T01:00:28.776Z",
             "sortNum": 10000
+        },
+        {
+            "_id": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get",
+            "containerId": "",
+            "created": "2024-03-03T19:17:20.307Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "ea2390f0-cf08-415f-bee0-e3116f1b9da9",
+            "name": "Update",
+            "containerId": "",
+            "created": "2024-03-04T00:28:05.887Z",
+            "sortNum": 30000
         }
     ],
     "requests": [
         {
-            "_id": "b649e56c-c0ad-4576-94f4-6ded053310a7",
-            "colId": "1b6371f3-7f81-4d77-9ab4-d49b74d25c9b",
-            "containerId": "e9075d48-83bd-4ec3-9f8e-db91340b122e",
-            "name": "Create an account",
-            "url": "/registUser",
+            "_id": "e4d74e21-ea26-4fa1-8731-057dd774977a",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "be6948b3-6d7e-4e72-9b79-92aa0da4de7a",
+            "name": "Add a Company",
+            "url": "/saveCompany",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-01T01:32:36.766Z",
-            "modified": "2024-03-01T05:12:58.459Z",
+            "created": "2024-02-29T01:55:26.265Z",
+            "modified": "2024-03-04T00:09:50.188Z",
             "headers": [],
             "params": [],
             "body": {
@@ -31,15 +45,65 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Realiquez"
+                        "value": "Absolute"
+                    },
+                    {
+                        "name": "category",
+                        "value": "Mecanica"
+                    },
+                    {
+                        "name": "years",
+                        "value": "8"
+                    },
+                    {
+                        "name": "impactOfCompany",
+                        "value": "Intermedio"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6dcc9641-be8c-4c3c-aec4-e1f26edca044",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get years",
+            "url": "/getCompany",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-03T19:17:26.794Z",
+            "modified": "2024-03-03T19:19:03.016Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "047f9621-d154-473c-b392-ac2133ab7458",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "be6948b3-6d7e-4e72-9b79-92aa0da4de7a",
+            "name": "Add a User",
+            "url": "/register",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-03T19:30:25.268Z",
+            "modified": "2024-03-03T19:31:54.096Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Jorge"
                     },
                     {
                         "name": "lastname",
-                        "value": "Sosa"
+                        "value": "Muralles"
                     },
                     {
                         "name": "username",
-                        "value": "Realique"
+                        "value": "Jmur"
                     },
                     {
                         "name": "password",
@@ -47,30 +111,99 @@
                     },
                     {
                         "name": "email",
-                        "value": "estradadiego@gmail.com"
+                        "value": "jmurales@gmail.com"
                     },
                     {
                         "name": "phone",
-                        "value": "22556633"
+                        "value": "44778877"
                     },
                     {
                         "name": "role",
-                        "value": "USER"
+                        "value": "ADMIN"
                     }
                 ]
             },
             "tests": []
         },
         {
-            "_id": "389a2e2f-e384-41a2-8de0-3d3542f6bc71",
-            "colId": "1b6371f3-7f81-4d77-9ab4-d49b74d25c9b",
-            "containerId": "e9075d48-83bd-4ec3-9f8e-db91340b122e",
-            "name": "Login",
+            "_id": "e1bb83b0-a08b-45a9-9a41-be09422920c9",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get company A to Z",
+            "url": "/getAZ",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-04T00:08:19.919Z",
+            "modified": "2024-03-04T00:08:26.847Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b73b2101-348f-43ac-a324-8201fcc885dd",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get company Z to A",
+            "url": "/getZA",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-04T00:08:41.203Z",
+            "modified": "2024-03-04T00:08:48.317Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3a9ae0dc-61d3-4eea-902f-7bc2c14e5d5f",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "ea2390f0-cf08-415f-bee0-e3116f1b9da9",
+            "name": "Update a company",
+            "url": "/updateCompany/65e4cb7e66ffe5593749092d",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-03-04T00:29:33.210Z",
+            "modified": "2024-03-04T00:47:55.812Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZDBhMDY5MDE5N2YyMzYwODJlY2UiLCJ1c2VybmFtZSI6ImptdXIiLCJuYW1lIjoiSm9yZ2UiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDk1MTI2NTEsImV4cCI6MTcwOTUyNzA1MX0.ZhNEEhggUkxYxdAHNhi2xVRHFhHOzNg6-dBhQ_vKIds"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "TecnoLogo+"
+                    },
+                    {
+                        "name": "category",
+                        "value": "Tecnologia"
+                    },
+                    {
+                        "name": "years",
+                        "value": "9"
+                    },
+                    {
+                        "name": "impactOfCompany",
+                        "value": "Intermedio"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "650f29c1-f451-49c3-bf4d-60b4907b5d5c",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "be6948b3-6d7e-4e72-9b79-92aa0da4de7a",
+            "name": "LOGIN",
             "url": "/login",
             "method": "POST",
-            "sortNum": 30000,
-            "created": "2024-03-01T02:37:55.428Z",
-            "modified": "2024-03-01T05:13:33.847Z",
+            "sortNum": 70000,
+            "created": "2024-03-04T00:32:38.012Z",
+            "modified": "2024-03-04T00:36:49.104Z",
             "headers": [],
             "params": [],
             "body": {
@@ -79,7 +212,7 @@
                 "form": [
                     {
                         "name": "account",
-                        "value": "Realique"
+                        "value": "jmurales@gmail.com"
                     },
                     {
                         "name": "password",
@@ -90,87 +223,23 @@
             "tests": []
         },
         {
-            "_id": "8c6a0d30-3a9b-4800-93f8-b1ec4d15f798",
-            "colId": "1b6371f3-7f81-4d77-9ab4-d49b74d25c9b",
-            "containerId": "e9075d48-83bd-4ec3-9f8e-db91340b122e",
-            "name": "Create a Post",
-            "url": "/createPost",
-            "method": "POST",
-            "sortNum": 40000,
-            "created": "2024-03-01T04:00:03.319Z",
-            "modified": "2024-03-01T04:29:41.709Z",
-            "headers": [
-                {
-                    "name": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNDBiMTA3OTcxZDUyMmQ2M2Y1ODkiLCJ1c2VybmFtZSI6IkRpZWd1aXMiLCJlbWFpbCI6ImVzdHJhZGFkaWVnb0BnbWFpbC5jb20iLCJuYW1lIjoiRGllZ28iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcwOTI2NzM3NSwiZXhwIjoxNzA5Mjc4MTc1fQ.NTe5zCobcewZWFYxvJVyCOvQSlPBy6cbNVfC9cUPVss"
-                }
-            ],
+            "_id": "18716c8b-4387-4317-88e0-74be3ed5e85b",
+            "colId": "9acd7225-0a6c-408b-adae-5d4b860c0efe",
+            "containerId": "69a36c62-79ff-4325-918a-a0cff6ff2d5a",
+            "name": "Get Excel",
+            "url": "/getExcel",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-04T00:56:07.984Z",
+            "modified": "2024-03-04T00:56:12.462Z",
+            "headers": [],
             "params": [],
-            "body": {
-                "type": "formencoded",
-                "raw": "",
-                "form": [
-                    {
-                        "name": "title",
-                        "value": "Quiero cambiarme de carrera"
-                    },
-                    {
-                        "name": "category",
-                        "value": "SOBREMI"
-                    },
-                    {
-                        "name": "maintext",
-                        "value": "Quiero quejarme de mi vida ya que pense que informatica iba a ser re facil y resulto que no jajajaja"
-                    },
-                    {
-                        "name": "user",
-                        "value": "65e140b107971d522d63f589"
-                    }
-                ]
-            },
-            "tests": []
-        },
-        {
-            "_id": "16fd5aa7-4c85-43c1-ab77-d6344b9e4670",
-            "colId": "1b6371f3-7f81-4d77-9ab4-d49b74d25c9b",
-            "containerId": "e9075d48-83bd-4ec3-9f8e-db91340b122e",
-            "name": "Reply a post",
-            "url": "/reply",
-            "method": "POST",
-            "sortNum": 50000,
-            "created": "2024-03-01T05:11:41.078Z",
-            "modified": "2024-03-01T05:13:42.836Z",
-            "headers": [
-                {
-                    "name": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNjNkYThhMWI0OWE2NTRhODFlODYiLCJ1c2VybmFtZSI6IlJlYWxpcXVlIiwiZW1haWwiOiJlc3RyYWRhZGllZ29AZ21haWwuY29tIiwibmFtZSI6IlJlYWxpcXVleiIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA5MjcwMDEzLCJleHAiOjE3MDkyODA4MTN9.sRrICrD75Aat8g1JJeKSw-EMHqvNGSndpeF71dpTdIY"
-                }
-            ],
-            "params": [],
-            "body": {
-                "type": "formencoded",
-                "raw": "",
-                "form": [
-                    {
-                        "name": "replypost",
-                        "value": "Pero si ta facil -Realiquez"
-                    },
-                    {
-                        "name": "comment",
-                        "value": "65e154c575bea6ca3f32a817"
-                    },
-                    {
-                        "name": "user",
-                        "value": "65e163da8a1b49a654a81e86"
-                    }
-                ]
-            },
             "tests": []
         }
     ],
     "settings": {
         "options": {
-            "baseUrl": "localhost:2689"
+            "baseUrl": "localhost:2688"
         }
     }
 }

@@ -5,7 +5,15 @@ const companySchema = mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    category: {
+        type: String,
+        required: true
+    },
+    years:{ 
+        type: Number,
+        required: true
+    },
+    impactOfCompany:{ 
         type: String,
         required: true
     }

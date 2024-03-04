@@ -8,6 +8,7 @@ import cors from 'cors'
 
 //Exportamos las rutas de las entidades
 import CompanyRoutes from "../src/company/company.routes.js"
+import UserRoutes from "../src/user/user.routes.js"
 
 
 
@@ -25,7 +26,7 @@ app.use(express.json())
 
 //declarar su uso de rutas
 app.use(CompanyRoutes)
-
+app.use(UserRoutes)
 
 
 export const initServer = ()=>{
