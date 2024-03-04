@@ -110,3 +110,13 @@ export const getExcel = async(req, res) =>{
         return res.status(500).send({message: 'Error getting company '})
     }
 }
+
+export const getYearCareer = async(req, res) =>{
+    try {
+        let company = await Company.find().sort({ yearsCareer: 1 })//Si queremos hacerlo al reves solo se pone -1
+        return res.send({company})
+    } catch (error) {
+        console.error(error)
+        return res.status(500).send({message: 'Error getting company'})
+    }
+}
